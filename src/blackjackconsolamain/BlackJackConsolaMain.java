@@ -23,6 +23,8 @@ public class BlackJackConsolaMain {
         Baraja d = new Baraja();
         d.crearcartas();
         
+        //hasta aca esta bien
+        
         Mano ManoCasa = new Mano();     //mano para la casa 
         Mano ManoJugador = new Mano();      //mano para el jugador
         

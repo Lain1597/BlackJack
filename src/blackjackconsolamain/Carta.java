@@ -10,22 +10,27 @@ package blackjackconsolamain;
  * @author LAIN-PC
  */
 public class Carta {
-    private char numero;    //2345678910JQKA
-    private char tipo;      // "corazones" "espada" "trebol" "cocos"
-
-    public void setNumero(char numero) {
+    public String numero;    //2345678910JQKA
+    public String tipo;      // "corazones" "espada" "trebol" "cocos"
+    
+    public Carta(String numero , String tipo){
         this.numero = numero;
-    }
-
-    public void setTipo(char tipo) {
         this.tipo = tipo;
     }
 
-    public char getNumero() {
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getNumero() {
         return numero;
     }
 
-    public char getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
@@ -33,13 +38,13 @@ public class Carta {
     
     //metodo para obtener el valor
     public int getValor(){
-        if (this.numero=='J') return 11; {
+        if ("J".equals(this.numero)) return 11; {
             switch (this.numero) {
-                case 'Q':
+                case "Q":
                     return 12;
-                case 'K':
+                case "K":
                     return 13;
-                case 'A':
+                case "A":
                     return 1;
                 default:
                     return Integer.parseInt(this.numero+ "" );

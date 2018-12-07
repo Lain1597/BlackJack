@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author LAIN-PC
  */
 public class Mano {
-    ArrayList<Carta> arregloMano = new ArrayList<Carta>();
+    ArrayList<Carta> arregloMano = new ArrayList<>();
     int posicion=0;
     
     //met pedir carta
