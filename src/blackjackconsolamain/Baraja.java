@@ -37,7 +37,7 @@ public class Baraja {
     }
     
     void BarajarCartas(){
-        //shuffle con arreglo   
+        //shuffle con arreglo   sada
         ArrayList<Carta> cartas = new ArrayList(Arrays.asList(carta));        
         Collections.shuffle(cartas);
     }
