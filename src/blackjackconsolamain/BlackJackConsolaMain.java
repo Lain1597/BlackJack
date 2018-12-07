@@ -52,7 +52,7 @@ public class BlackJackConsolaMain {
         if (ManoJugador.getValor()<ManoCasa.getValor()) {
             System.out.println("Perdiste perro ");
         } else{
-            System.out.println("Ganaste");
+            System.out.println("Ganaste"); //hmmbnb
         }
     }
     
