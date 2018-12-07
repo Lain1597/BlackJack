@@ -1,0 +1,56 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package blackjackconsolamain;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
+/**
+ *
+ * @author LAIN-PC
+ */
+public class Baraja {
+    Carta carta[]= new Carta[52];
+    int posicion;
+    
+    //crear cartas 
+    public void crearcartas(){
+        String numero = "2345678910JQKA";
+        String tipo = "Corazones"+ "Espada"+ "trebol"+ "cocos";   
+        int index=0;
+        
+        //generamos las 52 cartas de la baraja
+        for (int i = 0; i < numero.length(); i++) {
+            for (int j = 0; j < tipo.length(); j++) {
+                Carta cartatemporal = new Carta();
+                cartatemporal.setNumero(numero.charAt(j));
+                cartatemporal.setTipo(tipo.charAt(i));
+                this.carta[index]=cartatemporal;
+                index++;
+            }    
+        }
+        BarajarCartas();
+    }
+    
+    private void BarajarCartas(){
+        //shuffle con arreglo
+        ArrayList<Carta> arrr = new ArrayList();
+        Collection.shuffle(arrr);
+    }
+    
+    //metodo para retornar una carta del tope de la baraja
+    public Carta getCarta(){
+        if (posicion ==51) {
+            System.out.println("No hay mas cartas que repartir ");
+            return null;
+        }
+        Carta cartatemporal = this.getCarta();
+        posicion ++;    //mover una posicion a la derecha/izq en el arreglo 
+        return cartatemporal;
+    }
+      
+}
