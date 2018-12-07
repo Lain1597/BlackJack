@@ -7,64 +7,48 @@ package blackjackconsolamain;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
-
+import java.util.Collection;
 
 /**
  *
  * @author LAIN-PC
  */
 public class Baraja {
-    public ArrayList<Carta> baraja1;
+    Carta carta[]= new Carta[52];
     int posicion;
-    
-    public Baraja(){
-        baraja1= new ArrayList<>(52);
-        posicion = 0;
-    }
     
     //crear cartas 
     public void crearcartas(){
-       
-        String [] numero = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
-        String [] tipo = {"♥", "♦", "♣", "♠"};   
+        String [] Cartas = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+        String [] tipo = {"Corazones", "Espada", "Trébol", "Coco"};
+        String numero = "2345678910JQKA";
+        String tipo = "Corazones"+ "Espada"+ "trebol"+ "cocos";   
+        int index=0;
         
-        
-        do{
-            for (int i=0 ; i<numero.length ; i++) {
-                for (int j=0 ; j<tipo.length ; j++) {
-                    
-                    Carta temporal = new Carta(numero[i],tipo[j]);
-                    baraja1.add(temporal);                    
-                    
-                    System.out.println(baraja1.get(posicion).numero + baraja1.get(posicion).tipo) ;
-                    posicion++;
-                }
+        //crear baraja
+        for (int i = 0; i < Cartas.length; i++) {
+            for (int j = 0; j < ; j++) {
+                System.out.println("" + );
             }
-        }while(posicion<52);       
-       //mostramos cartas
-       PrintCards(baraja1);
-       //barajeamos y mostramos
-       System.out.println("*********************************************");
-        PrintCards(BarajarCartas(baraja1));        
-        
-    }
-    public void PrintCards(ArrayList<Carta> maso){
-        
-        System.out.println("Mostramos baraja en estado actual :");
-        for (Iterator<Carta> it = maso.iterator(); it.hasNext();) {
-            Carta cartitas = it.next();
-            System.out.println(cartitas.numero + cartitas.tipo);
         }
-       
+        
+        //generamos las 52 cartas de la baraja
+        for (int i = 0; i < numero.length(); i++) {
+            for (int j = 0; j < tipo.length(); j++) {
+                Carta cartatemporal = new Carta();
+                cartatemporal.setNumero(numero.charAt(j));
+                cartatemporal.setTipo(tipo.charAt(i));
+                this.carta[index]=cartatemporal;
+                index++;
+            }    
+        }
+        BarajarCartas();
     }
     
-    private ArrayList<Carta> BarajarCartas(ArrayList<Carta> maso){
+    private void BarajarCartas(){
         //shuffle con arreglo
-        ArrayList<Carta> copia = maso;
-        Collections.shuffle(copia);
-        return copia;
+        ArrayList<Carta> arrr = new ArrayList();
+        Collection.shuffle(arrr);
     }
     
     //metodo para retornar una carta del tope de la baraja
