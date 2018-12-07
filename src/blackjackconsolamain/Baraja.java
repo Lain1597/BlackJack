@@ -19,9 +19,18 @@ public class Baraja {
     
     //crear cartas 
     public void crearcartas(){
+        String [] Cartas = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+        String [] tipo = {"Corazones", "Espada", "Trébol", "Coco"};
         String numero = "2345678910JQKA";
         String tipo = "Corazones"+ "Espada"+ "trebol"+ "cocos";   
         int index=0;
+        
+        //crear baraja
+        for (int i = 0; i < Cartas.length; i++) {
+            for (int j = 0; j < ; j++) {
+                System.out.println("" + );
+            }
+        }
         
         //generamos las 52 cartas de la baraja
         for (int i = 0; i < numero.length(); i++) {
