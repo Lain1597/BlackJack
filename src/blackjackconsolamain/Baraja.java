@@ -7,7 +7,7 @@ package blackjackconsolamain;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
+import java.util.*;
 
 /**
  *
@@ -36,10 +36,10 @@ public class Baraja {
         BarajarCartas();
     }
     
-    private void BarajarCartas(){
-        //shuffle con arreglo
-        ArrayList<Carta> arrr = new ArrayList();
-        Collection.shuffle(arrr);
+    void BarajarCartas(){
+        //shuffle con arreglo   
+        ArrayList<Carta> cartas = new ArrayList(Arrays.asList(carta));        
+        Collections.shuffle(cartas);
     }
     
     //metodo para retornar una carta del tope de la baraja
